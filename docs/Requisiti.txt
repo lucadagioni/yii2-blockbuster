@@ -1,0 +1,82 @@
+Requisiti
+Creazione di un portale web che gestisca i film di una filmoteca come poteva essere Blockbuster al tempo.
+- Multilingua:
+	- Italiano
+	- Inglese anche se attualmente non tradotto
+	
+- Multiutente con diversi ruoli
+	- amministratore
+	- acquirenti
+	- revisore di recensioni
+
+- interfaccia di amministrazione per:
+	- gestione anagrafica utenti
+		- reinvio password
+		- registrazione utente
+	- gestione attori dei film foto compresa
+	- gestione dei film (creazione, modifica, cancellazione)
+		- titolo
+		- copertina foto in formato jpeg/jpg o png
+		- descrizione
+		- attori coinvolti
+		- prezzo
+		- numero di copie
+	- gestore prezzi
+	- gestione acquisti
+	
+	
+- Nell'utilizzo l'applicazione deve poter permettere l'acquisto di film dal portale solo da parte di utenti registrati.
+- un utente registrato, dopo aver effettuato login deve poter scorrere la lista dei film e comprare il film, se disponibile.
+- un fruitore deve poter vedere lo storico dei suoi acquisti in un'area dedicata
+- ogni volta che viene effettuato un acquisto deve essere generato una ricevuta in pdf che riporti semplicemente il titolo del film, l'id del film il prezzo pagato e la data di prenotazione
+- non è richiesta alcuna funzionalità di pagamento al momento
+- All'interno della propria pagina, un utente deve poter modificare i propri dati di fatturazione 
+	- Nome, cognome, indirizzo, codice fiscale etc.
+
+- Deve essere presente il cookie consent
+
+- I prezzi di ogni film possono essere variabili e soprattutto possono essere periodici
+	- Ogni prezzo può avere una validità dal giorno x al giorno y ma potrebbe avere anche un periodo all'interno dell'anno indipendentemente dall'anno
+		- ad esempio dal 1 di febbraio al 30 di marzo scatta quel prezzo.
+	- per i prezzi fa sempre fede la data in cui avviene la prenotazione.
+	- ogni prenotazione può essere effettuata solo per il giorno in cui avviene la prenotazione, non posso prenotare un film per il 15/03/2020 se siamo a febbraio.
+	
+- Un utente può cambiare la propria password direttamente dalla propria area personale
+- un utente non loggato, se in possesso della mail di registrazione può richiedere la password e ne viene generata una dal sistema che verrà comunicata direttamente alla mail del richiedente
+- Per ogni film possono essere lasciate delle recensioni da parte degli utenti che devono essere approvate
+	- di base ogni recensione viene messa "visibile"
+- Un revisore, accedendo con le sue credenziali di login può gestire le recensioni nascondendole o lasciandole in vista
+	- ogni volta che il recensore accede deve essere informato se ci sono nuove recensioni da controllare.
+- Un amministratore ha la gestione delle recensioni come un revisore
+
+PECULIARITÀ
+- Framework di utilizzo: Yii2
+- Database: MySql in versione MariaDb
+- PHP 5.6
+- Per lo sviluppo dell'applicazione non è richiesta alcuna grafica se non quella di base del framework
+
+
+- Deve essere fornito:
+	- il sorgente del codice
+	- Diagramma er del DB
+	- Dump del database
+	- Documentazione tecnica di funzionamento
+
+- È richiesto il solo funzionamento in locale
+
+N.B.
+- La maggior parte delle funzionalità sono già presenti nel framework ma lo dovete studiare bene
+- Possono essere utilizzati tutti i moduli aggiuntivi e i plugin del caso (es. kartik)
+- Le password devono essere cifrate
+- Per i permessi studiare il sistema RBAC del framework
+
+Consegna:
+	12/04/2020
+	
+	In Bocca al Lupo!!!
+
+	
+	
+	
+		
+	
